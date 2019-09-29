@@ -118,7 +118,7 @@
 
   #main-1st-row-1st-col > #helbiz-e-scooter-img,
   #main-1st-row-2nd-col > #helbiz-e-scooter-img {
-    /* to put this box underneath the preceiding <a> element */
+    /* to put this box under the preceiding <a> element */
     display: block;
 
     width: 170px;
@@ -147,6 +147,21 @@
     vertical-align: middle;
   }
   /* /main - 1st row */
+
+  /* main - 2nd row */
+  #main-2nd-row {
+    position: relative;
+    margin-top: 80px;
+  }
+
+  #main-2nd-row-1st-col {
+    background-image: url("../img/helbiz-banner.jpg");
+    background-size: cover;
+
+    /* to position the e-scooter all the way to the left */
+    background-position-x: -200px;
+  }
+  /* /main - 2nd row */
 
 /* /rules used in specific parts of the page */
 
@@ -185,6 +200,47 @@
       height: 18px;
     }
     /* /main - 1st row */
+
+    /* main - 2nd row */
+    #main-2nd-row > #iphone-img {
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 317px;
+      height: 510px;
+      z-index: 5;
+    }
+
+    #main-2nd-row-1st-col {
+      height: 400px;
+    }
+
+    #main-2nd-row-2nd-col {
+      height: 150px;
+
+      /* to move 2nd-col under the iphone image */
+      margin-top: 185px;
+    }
+
+    #main-2nd-row-2nd-col-1st-col,
+    #main-2nd-row-2nd-col-2nd-col {
+      position: relative;
+      height: 70px;
+      text-align: center;
+    }
+
+    #main-2nd-row-2nd-col-1st-col > h2 {
+      /* to make text stay on a single line */
+      width: 100%;
+
+      font-size: 30px;
+    }
+
+    #main-2nd-row-2nd-col-2nd-col p {
+      margin-top: 7px;
+    }
+    /* /main - 2nd row */
 
   /* /rules used in specific parts of the page */
 
@@ -238,6 +294,45 @@
       height: 20px;
     }
     /* /main - 1st row */
+
+    /* main - 2nd row */
+    #main-2nd-row > #iphone-img {
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 391px;
+      height: 639px;
+      z-index: 5;
+    }
+
+    #main-2nd-row-1st-col {
+      height: 500px;
+    }
+
+    #main-2nd-row-2nd-col {
+      height: 235px;
+
+      /* to move 2nd-col under the iphone image */
+      margin-top: 270px;
+    }
+
+    #main-2nd-row-2nd-col-1st-col,
+    #main-2nd-row-2nd-col-2nd-col {
+      position: relative;
+      height: 70px;
+      text-align: center;
+    }
+
+    #main-2nd-row-2nd-col-1st-col > h2 {
+      /* to make text stay on a single line */
+      width: 100%;
+    }
+
+    #main-2nd-row-2nd-col-2nd-col p {
+      margin-top: 7px;
+    }
+    /* /main - 2nd row */
 
   /* /rules used in specific parts of the page */
 
@@ -321,6 +416,49 @@
       height: 20px;
     }
     /* /main - 1st row */
+
+    /* main - 2nd row */
+    #main-2nd-row > #iphone-img {
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 391px;
+      height: 639px;
+      z-index: 5;
+    }
+
+    #main-2nd-row-1st-col {
+      height: 400px;
+    }
+
+    #main-2nd-row-2nd-col {
+      height: 333px;
+    }
+
+    #main-2nd-row-2nd-col-1st-col,
+    #main-2nd-row-2nd-col-2nd-col {
+      position: relative;
+      width: 40%;
+      height: 333px;
+    }
+
+    #main-2nd-row-2nd-col-1st-col {
+      float: left;
+    }
+
+    #main-2nd-row-2nd-col-1st-col > h2 {
+      font-size: 36px;
+    }
+
+    #main-2nd-row-2nd-col-2nd-col {
+      float: right;
+    }
+
+    #main-2nd-row-2nd-col-2nd-col p {
+      margin-top: 7px;
+    }
+    /* /main - 2nd row */
 
   /* /rules used in specific parts of the page */
 
