@@ -1,210 +1,328 @@
 /* reset rules */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 /* /reset rules */
 
 /* rules used (or usable) in different parts of the page */
-a {
-  /* overwriting browser's style */
-  text-decoration: none;
-  color: black;
-}
+  a {
+    /* overwriting browser's style */
+    text-decoration: none;
+    color: black;
+  }
 
-li {
-  /* overwriting browser's style */
-  list-style-type: none;
-}
+  li {
+    /* overwriting browser's style */
+    list-style-type: none;
+  }
+
+  /* to center this box both vertically and horizontally in its parent */
+  .centered-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 /* /rules used (or usable) in different parts of the page */
 
 /* rules used in specific parts of the page */
-body {
-  height: 5000px; /* debug */
-  font-family: 'Open Sans', sans-serif;
-}
+  body {
+    height: 5000px; /* debug */
+    font-family: 'Open Sans', sans-serif;
+  }
 
-header {
-  position: relative;
+  header {
+    position: relative;
 
-  /* to not occupy the space of the fixed navbar */
-  padding-top: 70px;
-}
+    /* to not occupy the space of the fixed navbar */
+    padding-top: 70px;
+  }
 
-/* to give an opacity to the background image  */
-header:after {
-  content : "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(../img/header-background.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  opacity : 0.4;
-  z-index: -1;
-}
+  /* to give an opacity to the background image  */
+  header:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/header-background.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity : 0.4;
+    z-index: -1;
+  }
 
-#navbar {
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 70px;
-  background-color: white;
-}
+  #navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+  }
 
-#navbar .helbiz-logo-img {
-  float: left;
-  width: 80px;
-  height: 12px;
+  #navbar .helbiz-logo-img {
+    float: left;
+    width: 80px;
+    height: 12px;
 
-  /* to vertically center in the navbar */
-  margin-top: 29px;
+    /* to vertically center in the navbar */
+    margin-top: 29px;
 
-  margin-left: 8%;
-}
+    margin-left: 8%;
+  }
 
-#navbar .fa-bars-custom {
-  float: right;
+  #navbar .fa-bars-custom {
+    float: right;
 
-  /* to vertically center in the navbar */
-  line-height: 70px;
+    /* to vertically center in the navbar */
+    line-height: 70px;
 
-  margin-right: 8%;
-  color: black;
-}
+    margin-right: 8%;
+    color: black;
+  }
 
-#header-2nd-row {
-  position: relative;
-  text-align: center;
-}
+  #header-2nd-row {
+    position: relative;
+    text-align: center;
+  }
 
-#header-2nd-row-inside-wrapper {
-  /* to center this box both vertically and horizontally in its parent */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  #header-2nd-row p {
+    margin-bottom: 15px;
+    padding-top: 7px;
+    font-size: .9375em;
+  }
 
-#header-2nd-row p {
-  margin-bottom: 15px;
-  padding-top: 7px;
-  font-size: .9375em;
-}
+  #header-2nd-row .app-store-badge-img,
+  #header-2nd-row .google-play-badge-img {
+    margin: 0 7px;
+  }
 
-#header-2nd-row .app-store-badge-img,
-#header-2nd-row .google-play-badge-img {
-  margin: 0 7px;
-}
+  /* main - 1st row */
+  #main-1st-row
+  {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  #main-1st-row-1st-col,
+  #main-1st-row-2nd-col {
+    float: left;
+    margin-top: 30px;
+    padding: 50px 0;
+    background-color: rgb(250, 250, 250);
+  }
+
+  #main-1st-row-1st-col > #helbiz-e-scooter-img,
+  #main-1st-row-2nd-col > #helbiz-e-scooter-img {
+    /* to put this box underneath the preceiding <a> element */
+    display: block;
+
+    width: 170px;
+    height: 307px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+  #main-1st-row-1st-col > h2,
+  #main-1st-row-2nd-col > h2 {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  #main-1st-row-1st-col > a,
+  #main-1st-row-2nd-col > a {
+    font-size: 20px;
+    color: rgb(110, 192, 250);
+  }
+
+  #main-1st-row-1st-col .fa-chevron-right-custom,
+  #main-1st-row-2nd-col .fa-chevron-right-custom {
+    /* to center this box vertically in the text line */
+    vertical-align: middle;
+  }
+  /* /main - 1st row */
+
 /* /rules used in specific parts of the page */
 
 /* rules for specific width ranges */
 @media screen and (min-width: 576px) and (max-width: 768px) {
 
   /* rules used in specific parts of the page */
-  #navbar nav {
-    display: none;
-  }
 
-  #header-2nd-row {
-    min-height: 340px;
-  }
+    /* header */
+    #navbar nav {
+      display: none;
+    }
 
-  #header-2nd-row-inside-wrapper {
-    min-width: 540px;
-  }
+    #header-2nd-row {
+      min-height: 340px;
+    }
 
-  #header-2nd-row h1 {
-    font-size: 1.875em;
-  }
+    #header-2nd-row-inside-box {
+      min-width: 540px;
+    }
+
+    #header-2nd-row h1 {
+      font-size: 1.875em;
+    }
+    /* /header */
+
+    /* main - 1st row */
+    #main-1st-row-1st-col,
+    #main-1st-row-2nd-col {
+      width: 100%;
+    }
+
+    #main-1st-row-1st-col > #helbizgo-logo-img,
+    #main-1st-row-2nd-col > #helbizgo-logo-img {
+      width: 154px;
+      height: 18px;
+    }
+    /* /main - 1st row */
+
   /* /rules used in specific parts of the page */
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
 
   /* rules used in specific parts of the page */
-  #navbar nav {
-    display: none;
-  }
 
-  #header-2nd-row {
-    min-height: 560px;
-  }
+    /* header */
+    #navbar nav {
+      display: none;
+    }
 
-  #header-2nd-row-inside-wrapper {
-    min-width: 720px;
-  }
+    #header-2nd-row {
+      min-height: 560px;
+    }
 
-  #header-2nd-row h1 {
-    font-size: 3.125em;
-  }
+    #header-2nd-row-inside-box {
+      min-width: 720px;
+    }
+
+    #header-2nd-row h1 {
+      font-size: 3.125em;
+    }
+    /* /header */
+
+    /* main - 1st row */
+    #main-1st-row {
+      width: 770px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #main-1st-row-1st-col,
+    #main-1st-row-2nd-col {
+      width: 47%;
+    }
+
+    #main-1st-row-1st-col {
+      margin-right: 3%;
+    }
+
+    #main-1st-row-2nd-col {
+      margin-left: 3%;
+    }
+
+    #main-1st-row-1st-col > #helbizgo-logo-img,
+    #main-1st-row-2nd-col > #helbizgo-logo-img {
+      width: 171px;
+      height: 20px;
+    }
+    /* /main - 1st row */
+
   /* /rules used in specific parts of the page */
+
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
 
   /* rules used in specific parts of the page */
-  #navbar > #navbar-inside-wrapper {
-    width: 960px;
-    margin: auto;
-  }
 
-  #navbar .helbiz-logo-img {
-    margin-left: 0;
-  }
+    /* header */
+    #navbar > #navbar-inside-wrapper {
+      width: 960px;
+      margin: auto;
+    }
 
-  #navbar i {
-    display: none;
-  }
+    #navbar .helbiz-logo-img {
+      margin-left: 0;
+    }
 
-  #navbar nav {
-    float: right;
-    margin-right: 0;
-  }
+    #navbar i {
+      display: none;
+    }
 
-  #navbar nav > li {
-    display: inline-block;
-    margin-right: 30px;
-  }
+    #navbar nav {
+      float: right;
+      margin-right: 0;
+    }
 
-  #navbar nav > li:last-child {
-    margin-right: 0;
-  }
+    #navbar nav > li {
+      display: inline-block;
+      margin-right: 30px;
+    }
 
-  #navbar nav > li > a {
-    font-size: 10px;
-    font-weight: bold;
+    #navbar nav > li:last-child {
+      margin-right: 0;
+    }
 
-    /* to center this box vertically in its container */
-    line-height: 70px;
+    #navbar nav > li > a {
+      font-size: 10px;
+      font-weight: bold;
 
-    letter-spacing: 0.5px;
-  }
+      /* to center this box vertically in its container */
+      line-height: 70px;
 
-  #navbar nav > li > .vertical-line {
-    border-right: 1px solid black;
-    height: 20px;
-    margin: 0 5px;
+      letter-spacing: 0.5px;
+    }
 
-    /* to center this box vertically in the text line */
-    vertical-align: middle;
-  }
+    #navbar nav > li > .vertical-line {
+      border-right: 1px solid black;
+      height: 20px;
+      margin: 0 5px;
 
-  #header-2nd-row {
-    min-height: 560px;
-  }
+      /* to center this box vertically in the text line */
+      vertical-align: middle;
+    }
 
-  #header-2nd-row-inside-wrapper {
-    min-width: 890px;
-  }
+    #header-2nd-row {
+      min-height: 560px;
+    }
 
-  #header-2nd-row h1 {
-    font-size: 3.125em;
-  }
+    #header-2nd-row-inside-box {
+      min-width: 890px;
+    }
+
+    #header-2nd-row h1 {
+      font-size: 3.125em;
+    }
+    /* /header */
+
+    /* main - 1st row */
+    #main-1st-row-1st-col,
+    #main-1st-row-2nd-col {
+      width: 46%;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    #main-1st-row-1st-col > #helbizgo-logo-img,
+    #main-1st-row-2nd-col > #helbizgo-logo-img {
+      width: 171px;
+      height: 20px;
+    }
+    /* /main - 1st row */
+
   /* /rules used in specific parts of the page */
+
 }
 /* /rules for specific width ranges */
